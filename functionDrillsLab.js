@@ -54,12 +54,11 @@ greeting('Tom')
 
 //CODE HERE
 function add(param1, param2){
-    let int1 = Number(param1)
-    let int2 = Number(param2)
-    console.log(int1, '+', int2, '=', int1 + int2)
+    return Number(param1) + Number(param2)
 }
-
 let sum = add("5", "7")
+console.log(sum)
+
 
 
 ////////////////// PROBLEM 5 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,15 +76,16 @@ let sum = add("5", "7")
 function nameCheck(NAMEPARAM){
     let nameToString = String(NAMEPARAM)
     if (nameToString === "Steven") {
-      console.log ('What is up Stven?')
+      return (`What is up Stven?`)
     } else if (nameToString === "Bryan") {
-      console.log('Hey Bryan!')
+      return (`Hey Bryan!`)
     } else {
-      console.log('Cool name,', nameToString)
+      return (`Cool name ${nameToString}`)
     }
 }
 
-let nameGreeting = nameCheck('Steven')
+let nameGreeting = nameCheck('Sam')
+console.log(nameGreeting)
 
 
 ////////////////// PROBLEM 6 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -124,7 +124,6 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 //CODE HERE
 function printAllNames(arr) {
     for (let i = 0; i < arr.length ; i++) {
-    //for (let i = 0; i < arr.length ; i++) {
     console.log(arr[i]);
   }
 }
@@ -142,13 +141,14 @@ printAllNames(namesArr)
 
 //CODE HERE
 function thatsOdd(number) {
-  if (number % 2 != 0) {
-    console.log('That is odd indeed!')
+  if (number % 2 !== 0) {
+    return ('That is odd indeed!')
   } else {
-    console.log(`That's not odd!`)
+    return (`That's not odd!`)
   }
 }
-let oddChecker = thatsOdd(1)
+let oddChecker = thatsOdd(2)
+console.log(oddChecker)
 
 
 ////////////////// PROBLEM 9 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -173,7 +173,7 @@ function bigOrSmall(arr){
     }
   }
   let arrayEvaluator = answers
-  console.log(arrayEvaluator)
+  return arrayEvaluator
 }
 bigOrSmall(bigOrSmallArray)
 
@@ -236,12 +236,13 @@ function emailCheck(email){
   trimStr = email.replace(/\s+/g, '');
   // console.log(trimStr);
   if (trimStr.includes('@')){ 
-      console.log(trimStr, ": email verified!")
+      return `${trimStr}, ': email verified!'`
     } else {
-      console.log(trimStr, ': must provide a valid email address!')
+      return `${trimStr}, ': must provide a valid email address!'`
     }
 }
-emailCheck(str111)
+let t = emailCheck(str111)
+console.log(t)
 
 
 ////////////////// PROBLEM 13 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -257,9 +258,10 @@ emailCheck(str111)
 //CODE HERE
 function loveChocolate(gold){
   let chocolateFrog = 3
-  console.log('You bought:',gold/chocolateFrog, 'chocolate frogs.')
+  return `You bought: ${gold/chocolateFrog} chocolate frogs.`
 }
 let totalFrogs = loveChocolate(20)
+console.log(totalFrogs)
 
 
 
