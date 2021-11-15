@@ -295,7 +295,7 @@ let totalFrogs2 = loveChocolate2(8)
 
 
 ////////////////// PROBLEM 15 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0,1,2,3,4,5,6,8,9]
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, 
   write logic to determine if the array is in ascending order. The function should return true, if 
@@ -309,6 +309,7 @@ function arrayCheckAscend(array1){
     for (let j = i + 1; j < array1.length; j++) {
       if (array1[i] < array1[j] === true) {
         //console.log(array1[i], '<', array1[j])
+        return 
       } else {
         //console.log(array1[i], '>', array1[j])
         return false
