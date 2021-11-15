@@ -309,7 +309,7 @@ function arrayCheckAscend(array1){
     for (let j = i + 1; j < array1.length; j++) {
       if (array1[i] < array1[j] === true) {
         //console.log(array1[i], '<', array1[j])
-        return 
+        return true
       } else {
         //console.log(array1[i], '>', array1[j])
         return false
